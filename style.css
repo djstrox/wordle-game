@@ -1,0 +1,116 @@
+@keyframes animacionFondo {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 400px;
+    background-image: url('https://assetsio.gnwcdn.com/wordle-past-answers-header.jpg?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: animacionFondo 10s infinite;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0 auto;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(11, 95, 36);
+    margin-top: 50px;
+}
+
+.img {
+    max-width: 10%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.subrayado-animado {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #bbbbbb;
+
+
+    overflow: hidden;
+}
+
+.subrayado-animado::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease-out, left 0.3s ease-out;
+    transform: translateX(-50%);
+}
+
+.subrayado-animado:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+
+#guess-input {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px;
+    font-size: 18px;
+    width: 250px;
+    color: #141414;
+    border: 1px solid #ccc;
+}
+
+#guess-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #005307;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.letter {
+    border: 1px solid black;
+    padding: 3px;
+    margin: 3px;
+    min-width: 20px;
+    text-align: center;
+    display: inline-block
+}
+
+.row {
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.input-area {
+    margin: 30px;
+}
+
+.grid {}
