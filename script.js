@@ -1,6 +1,6 @@
 let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH']
 const palabraSecreta = diccionario[Math.floor(Math.random() * diccionario.length)];
-let oportunidades = 6
+let oportunidades = 30 //para que las oportunidades sean 6, ya que se van dividiendo, no restando
 
 let button = document.getElementById("guess-button")
 let input = document.getElementById("guess-input")
@@ -35,7 +35,7 @@ function intentar() {
             SPAN.style.backgroundColor = '#a4aec4';
         }
         ROW.appendChild(SPAN)
-        oportunidades++
+        oportunidades--
         if (oportunidades == 0) {
             acabar("¡Perdiste!😖")
         }
