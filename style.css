@@ -106,7 +106,9 @@ button:active {
 
 .row {
     margin-bottom: 10px;
-    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
 }
 
 .input-area {
